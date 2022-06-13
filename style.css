@@ -2,5 +2,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
+body{
+    min-height: 100vh;
+}
+
+header{
+    font-size: 1.2rem;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    color:rgb(5, 5, 91);
+}
+
+form{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+form button{
+    font-size: 1rem;
+    background-color:dodgerblue;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+form input{
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 5px;
 }
