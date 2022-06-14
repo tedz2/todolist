@@ -74,3 +74,8 @@ form input{
 .toDoTask{
     flex: 1;
 }
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.6;
+}

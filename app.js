@@ -27,4 +27,23 @@ function addTask(event){
     taskList.appendChild(listDiv);
 }
 
+function toTask(e){
+    const click = e.target;
+    if(click.classList[0] === "trashBtn"){
+    const todo = click.parentElement;
+    todo.remove();
+}
+
+    if(click.classList[0] === "completeBtn"){
+        const togo = click.parentElement;
+        togo.classList.add("completed");
+    }
+}
+
+
+
+
 taskButton.addEventListener('click', addTask);
+taskList.addEventListener('click', toTask);
+
+
