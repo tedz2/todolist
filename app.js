@@ -18,32 +18,24 @@ function addTask(event){
     completeButton.innerText = 'Completed';
     completeButton.classList.add("completeBtn");
     listDiv.appendChild(completeButton);
+    completeButton.addEventListener('click', function(e){
+        const button = e.target;
+        button.parentElement.classList.add("completed");
+    })
 
     const trashButton = document.createElement('button');
     trashButton.innerText = 'Delete';
     trashButton.classList.add("trashBtn");
     listDiv.appendChild(trashButton);
+    trashButton.addEventListener('click', function(e){
+        const button = e.target;
+        button.parentElement.remove();
+    })
 
     taskList.appendChild(listDiv);
 }
 
-function toTask(e){
-    const click = e.target;
-    if(click.classList[0] === "trashBtn"){
-    const todo = click.parentElement;
-    todo.remove();
-}
-
-    if(click.classList[0] === "completeBtn"){
-        const togo = click.parentElement;
-        togo.classList.add("completed");
-    }
-}
-
-
-
-
 taskButton.addEventListener('click', addTask);
-taskList.addEventListener('click', toTask);
+
 
 
