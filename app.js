@@ -5,6 +5,11 @@ const taskList = document.querySelector('.list');
 function addTask(event){
     event.preventDefault();
 
+    if(text.value.length === 0){
+        alert('Please write a Task');
+        return;
+    }
+
     const listDiv = document.createElement('div');
     listDiv.classList.add("toDoDiv");
 
